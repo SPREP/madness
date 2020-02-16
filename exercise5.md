@@ -1,3 +1,5 @@
+# Exercise 5 - Creating multiple webservers
+
 1. Create 3 containers using the nginx image
 2. Make sure that each container is using a mapped port (8080, 8081 and 8082) and is running in detached mode
 3. Make sure each container is using its own mapped volume containing an index.html page eg. html1, html2, html3 to overwrite the default index.html page
