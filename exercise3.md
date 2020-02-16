@@ -18,6 +18,7 @@ docker exec -it my-nginx /bin/bash
 > docker containers have the bare minimum utilities installed
 
 3. Once logged in, we can change the default message displayed on the index.html page. Navigate to the default index.html page at /usr/share/nginx/html
+   > for apache httpd the directory for the index.html is at /usr/local/apache2/htdocs
 
 ```bash
 cd /usr/share/nginx/html
