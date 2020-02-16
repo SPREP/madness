@@ -1,35 +1,10 @@
-# Exercise 2 - Docker Volumes
+# Excercise 2 - Nginx Container
 
-1. Look for the apache image (httpd) from https://hub.docker.com using the pull command
-
-```bash
-docker pull nginx
-```
-
-2. Test running the container
-
-docker run nginx
-
-3. Open a new terminal and check that the container has been created and is running with the ps command
-
-docker ps
-
-notice that docker automatically gave your container a random name in the NAMES column
-
-4. Close the running nginx container
-
-ctrl + c
-
-5. Recreate the nginx container and give it a proper name using the --name flag. Check the name and status of the container. docker run --name my-nginx
-
-6. Stop and remove the named container
-
-docker stop my-nginx docker rm my-nginx
-
-7. Recreate the named nginx container in detached mode using the -d option. This will ensure that the container is running in the background. check that the container is running. docker run --name my-nginx -d nginx
-
-8. Recreate the container and map port 80 (webserver port) with our port 8080 using the -p flag docker run --name my-nginx -d -p 8003:80 nginx
-
-9. Recreate the same container using a Dockerfile
-
-docker run --name my-nginx -v /home/tavitas/Documents/Work_Trips/2020/MNRE-IT-Training-Feb/exercise1:/usr/share/nginx/html:ro -d -p 8003:80 nginx docker stop my-nginx docker rm my-nginx
+1. Pull the nginx webserver image
+2. Create a container with the name test1-nginx in detached mode
+3. Map the local port 8080 on your machine to the port 80 of the nginx container
+4. Create another nginx container using the same image called test2-nginx
+5. Map the local port 8081 with the test2-nginx container port 80
+6. Check that you have both test1-nginx and test2-nginx running at the same time
+   > you can do this on the terminal as well as in the browser
+7. Create another container with the name test3-nginx
